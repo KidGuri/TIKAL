@@ -60,6 +60,25 @@ const SCHEDULE = [
   { day: "Domingo", hours: "Cerrado" },
 ];
 
+const REVIEWS_ROW1 = [
+  { name: "Javier", stars: 5, text: "Excelente experiencia. Desde el diseño hasta la instalación, todo el proceso fue muy profesional. Me gustó mucho que escucharan mis ideas y aportaran soluciones prácticas que mejoraron el resultado final." },
+  { name: "Merche Martin", stars: 5, text: "Una tienda estupenda para muebles a medida, muy profesionales y de muy buena calidad en madera lacada. Muy satisfecha con la habitación de mi hijo, la hicieron tal y como yo dije." },
+  { name: "Belen SR", stars: 5, text: "Excelente experiencia de principio a fin. Encargamos muebles a medida y no podríamos estar más satisfechos con el resultado. Los materiales son de altísima calidad y se nota el cuidado en cada detalle del acabado." },
+  { name: "Ignacio Santos", stars: 5, text: "Fuimos en busca de nuestra mesa de comedor y dimos en el clavo con el sitio. El asesoramiento, y atención recibida fueron excelentes y el resultado superaron enormemente nuestras expectativas." },
+  { name: "Lucas Alvarez", stars: 5, text: "Ha sido un auténtico placer comprar aquí. Desde el primer momento el trato fue cercano, profesional y sin esa sensación de \"venta rápida\" que a veces se encuentra en otras tiendas." },
+  { name: "Gonzalo Davó Sánchez", stars: 5, text: "Increíble!!! El mejor sitio para decorar tu casa, calidad buenísima, volveremos seguro!" },
+  { name: "MER ICOB", stars: 5, text: "Muy contenta. Calidad-precio. Amables y profesionales. Repetiré sin duda." },
+];
+
+const REVIEWS_ROW2 = [
+  { name: "Eva Fernandez", stars: 5, text: "Me ha encantado la tienda y el mimo con el que cuidan el detalle en cada pieza que trabajan." },
+  { name: "Raquel Gisbert", stars: 5, text: "Excelente servicio, gran humanidad, grandes profesionales y grandes muebles." },
+  { name: "Jacobo", stars: 5, text: "Calidad y trato excelente" },
+  { name: "Susana de la Mata", stars: 5, text: "Acabamos de comprar un sofá y nos encanta como nos ha quedado. Muy buen trato en la tienda, con mucha profesionalidad" },
+  { name: "MJJimenez", stars: 5, text: "Muy contenta de haber descubierto esta tienda. Muebles de buena calidad y a medida con un buen montaje. A destacar también la amabilidad y la atención al cliente." },
+  { name: "Alejandro Jimenez Alonso", stars: 5, text: "Buen trato, buena calidad y muy buena atención al cliente. Muy recomendable." },
+];
+
 export default function Home() {
   useScrollReveal();
   const [scrolled, setScrolled] = useState(false);
@@ -324,8 +343,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ───────── REVIEWS CAROUSEL ───────── */}
+      <section className="py-20 md:py-28 bg-cream relative grain overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center mb-14">
+          <p className="reveal text-sm tracking-[0.3em] uppercase text-warm font-light mb-4">
+            Opiniones
+          </p>
+          <h2 className="reveal delay-100 font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
+            Lo que dicen nuestros clientes
+          </h2>
+        </div>
+
+        {/* Row 1 — scrolls left */}
+        <div className="carousel-track mb-6">
+          <div className="carousel-slide animate-scroll-left">
+            {[...REVIEWS_ROW1, ...REVIEWS_ROW1].map((r, i) => (
+              <div
+                key={`r1-${i}`}
+                className="flex-shrink-0 w-[340px] md:w-[420px] bg-background border border-stone/60 p-8 flex flex-col gap-4"
+              >
+                <div className="flex gap-1">
+                  {Array.from({ length: r.stars }).map((_, s) => (
+                    <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill="#c4a882" stroke="none">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm md:text-base font-light text-muted leading-relaxed flex-1">
+                  &ldquo;{r.text}&rdquo;
+                </p>
+                <p className="text-sm font-medium tracking-wide text-foreground">
+                  {r.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2 — scrolls right */}
+        <div className="carousel-track">
+          <div className="carousel-slide animate-scroll-right">
+            {[...REVIEWS_ROW2, ...REVIEWS_ROW2].map((r, i) => (
+              <div
+                key={`r2-${i}`}
+                className="flex-shrink-0 w-[340px] md:w-[420px] bg-background border border-stone/60 p-8 flex flex-col gap-4"
+              >
+                <div className="flex gap-1">
+                  {Array.from({ length: r.stars }).map((_, s) => (
+                    <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill="#c4a882" stroke="none">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm md:text-base font-light text-muted leading-relaxed flex-1">
+                  &ldquo;{r.text}&rdquo;
+                </p>
+                <p className="text-sm font-medium tracking-wide text-foreground">
+                  {r.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="reveal text-sm tracking-[0.2em] uppercase text-warm font-light">
+            Google Reviews
+          </p>
+        </div>
+      </section>
+
       {/* ───────── PROJECTS GALLERY ───────── */}
-      <section id="proyectos" className="py-20 md:py-28 bg-cream relative grain">
+      <section id="proyectos" className="py-20 md:py-28 bg-background relative grain">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="text-center mb-20">
             <p className="reveal text-sm tracking-[0.3em] uppercase text-warm font-light mb-4">
