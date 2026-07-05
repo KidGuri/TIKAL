@@ -114,7 +114,7 @@ export default function Home() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-light tracking-widest uppercase text-muted hover:text-foreground transition-colors duration-300"
+                className="text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-foreground transition-colors duration-300"
               >
                 {link.label}
               </a>
