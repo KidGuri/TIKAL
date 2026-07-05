@@ -91,11 +91,23 @@ export default function Home() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
-          <a
-            href="#inicio"
-            className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl tracking-[0.25em] font-light text-foreground"
-          >
-            TIKAL
+          <a href="#inicio" className="text-foreground" aria-label="TIKAL Muebles">
+            <svg viewBox="0 0 300 250" className="h-10 md:h-12 w-auto" fill="currentColor">
+              <g>
+                <path d="M97.59,22.88v20.09h91.99V22.88H97.59z M182.89,36.27h-78.25v-6.7h78.25V36.27z"/>
+                <rect x="108.87" y="42.97" width="7.58" height="24.5"/>
+                <rect x="170.9" y="42.97" width="7.4" height="24.5"/>
+                <rect x="132.13" y="50.19" width="24.14" height="15.51"/>
+                <polygon points="118.39,75.16 79.15,75.16 68.93,95.6 77.27,95.6 83.59,82.66 118.39,82.68"/>
+                <polygon points="171.55,75.16 210.79,75.16 221.01,95.6 212.67,95.6 206.36,82.66 171.55,82.68"/>
+                <polygon points="66.4,109.76 118.39,109.76 118.39,102.29 62.13,102.29 52.3,121.03 60.59,121.03"/>
+                <polygon points="223.54,109.76 171.55,109.76 171.55,102.29 227.81,102.29 237.64,121.03 229.35,121.03"/>
+                <polygon points="50.37,135.31 118.39,135.31 118.39,128.5 46.14,128.5 36.03,148 44.26,148"/>
+                <polygon points="240.1,135.31 172.08,135.31 172.08,128.5 244.33,128.5 254.44,148 246.21,148"/>
+                <rect x="95.3" y="172.67" width="10.04" height="54.45"/>
+                <path d="M294.22,226.77l-5.07-9.56h-25.77l-0.13-50.62l-5.6-11.19l-92.21,0l-0.06-79.77h-39.36v79.42H10.54l-4.76,9.52 l49.34,0.17l0.04,8.86l0.04,53.09l10.31,0.13l-0.18-62.08l57.8,0.18l0.09,35.38l-0.09,26.48l10.4,0l-0.18-20.18l12.6-12.78 l13.48,22.73l6.24,10.21l12.44,0.05l-24.49-41.1l14.27-14.27h-12.86l-21.68,21.68v-41.06h24.54l-0.04,13.57l49.03-0.1l-26.12,61.61 h11.1l7.93-18.15l23.73,0.12l7.99,18.03h11.04l-25.85-61.74h36.42v61.74L294.22,226.77z M157.86,148.59h-24.44v-22.67h24.44V148.59 z M157.86,122.62h-24.44V99.59h24.44V122.62z M157.86,96.89h-24.44V82.21h24.44V96.89z M219.53,198.53l-15.31-0.31l7.47-18.16 L219.53,198.53z"/>
+              </g>
+            </svg>
           </a>
           <div className="hidden md:flex items-center gap-10">
             {NAV_LINKS.map((link) => (
@@ -168,11 +180,6 @@ export default function Home() {
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <div className="hero-line visible">
-            <span className="font-[family-name:var(--font-cormorant)] text-sm md:text-base tracking-[0.4em] uppercase text-warm-dark font-light">
-              Muebles a medida · Las Rozas de Madrid
-            </span>
-          </div>
-          <div className="mt-4 hero-line visible">
             <span className="font-[family-name:var(--font-cormorant)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-foreground leading-[1.1]">
               Fabricamos
             </span>
@@ -569,11 +576,23 @@ export default function Home() {
       {/* ───────── FOOTER ───────── */}
       <footer className="py-10 bg-foreground border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <a
-            href="#inicio"
-            className="font-[family-name:var(--font-cormorant)] text-xl tracking-[0.25em] font-light text-white/60"
-          >
-            TIKAL
+          <a href="#inicio" className="text-white/60" aria-label="TIKAL Muebles">
+            <svg viewBox="0 0 300 250" className="h-8 w-auto" fill="currentColor">
+              <g>
+                <path d="M97.59,22.88v20.09h91.99V22.88H97.59z M182.89,36.27h-78.25v-6.7h78.25V36.27z"/>
+                <rect x="108.87" y="42.97" width="7.58" height="24.5"/>
+                <rect x="170.9" y="42.97" width="7.4" height="24.5"/>
+                <rect x="132.13" y="50.19" width="24.14" height="15.51"/>
+                <polygon points="118.39,75.16 79.15,75.16 68.93,95.6 77.27,95.6 83.59,82.66 118.39,82.68"/>
+                <polygon points="171.55,75.16 210.79,75.16 221.01,95.6 212.67,95.6 206.36,82.66 171.55,82.68"/>
+                <polygon points="66.4,109.76 118.39,109.76 118.39,102.29 62.13,102.29 52.3,121.03 60.59,121.03"/>
+                <polygon points="223.54,109.76 171.55,109.76 171.55,102.29 227.81,102.29 237.64,121.03 229.35,121.03"/>
+                <polygon points="50.37,135.31 118.39,135.31 118.39,128.5 46.14,128.5 36.03,148 44.26,148"/>
+                <polygon points="240.1,135.31 172.08,135.31 172.08,128.5 244.33,128.5 254.44,148 246.21,148"/>
+                <rect x="95.3" y="172.67" width="10.04" height="54.45"/>
+                <path d="M294.22,226.77l-5.07-9.56h-25.77l-0.13-50.62l-5.6-11.19l-92.21,0l-0.06-79.77h-39.36v79.42H10.54l-4.76,9.52 l49.34,0.17l0.04,8.86l0.04,53.09l10.31,0.13l-0.18-62.08l57.8,0.18l0.09,35.38l-0.09,26.48l10.4,0l-0.18-20.18l12.6-12.78 l13.48,22.73l6.24,10.21l12.44,0.05l-24.49-41.1l14.27-14.27h-12.86l-21.68,21.68v-41.06h24.54l-0.04,13.57l49.03-0.1l-26.12,61.61 h11.1l7.93-18.15l23.73,0.12l7.99,18.03h11.04l-25.85-61.74h36.42v61.74L294.22,226.77z M157.86,148.59h-24.44v-22.67h24.44V148.59 z M157.86,122.62h-24.44V99.59h24.44V122.62z M157.86,96.89h-24.44V82.21h24.44V96.89z M219.53,198.53l-15.31-0.31l7.47-18.16 L219.53,198.53z"/>
+              </g>
+            </svg>
           </a>
           <p className="text-xs text-white/30 font-light tracking-wider">
             &copy; {new Date().getFullYear()} Tikal Muebles. Todos los derechos
