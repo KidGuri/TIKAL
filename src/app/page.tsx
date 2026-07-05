@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* ───────── ABOUT ───────── */}
-      <section id="nosotros" className="py-28 md:py-40 bg-background relative grain">
+      <section id="nosotros" className="py-20 md:py-28 bg-background relative grain">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
             <div>
@@ -233,8 +233,8 @@ export default function Home() {
                 atención al detalle.
               </p>
             </div>
-            <div className="reveal-image">
-              <div className="img-hover aspect-[4/5] relative">
+            <div className="reveal-scale delay-200">
+              <div className="img-hover aspect-[4/5] relative overflow-hidden">
                 <Image
                   src="/images/tikal-e6038fbc.jpg"
                   alt="Salón diseñado por TIKAL Muebles"
@@ -265,7 +265,7 @@ export default function Home() {
       </section>
 
       {/* ───────── SERVICES ───────── */}
-      <section id="servicios" className="py-28 md:py-40 bg-background relative grain">
+      <section id="servicios" className="py-20 md:py-28 bg-background relative grain">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="text-center mb-20">
             <p className="reveal text-sm tracking-[0.3em] uppercase text-warm font-light mb-4">
@@ -276,7 +276,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="space-y-32">
+          <div className="space-y-20 md:space-y-28">
             {SERVICES.map((service, i) => (
               <div
                 key={service.title}
@@ -300,8 +300,8 @@ export default function Home() {
                     Pide presupuesto
                   </a>
                 </div>
-                <div className={`reveal-image ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                  <div className="img-hover aspect-[3/2] relative">
+                <div className={`reveal-scale delay-200 ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                  <div className="img-hover aspect-[3/2] relative overflow-hidden">
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -318,7 +318,7 @@ export default function Home() {
       </section>
 
       {/* ───────── PROJECTS GALLERY ───────── */}
-      <section id="proyectos" className="py-28 md:py-40 bg-cream relative grain">
+      <section id="proyectos" className="py-20 md:py-28 bg-cream relative grain">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="text-center mb-20">
             <p className="reveal text-sm tracking-[0.3em] uppercase text-warm font-light mb-4">
@@ -374,11 +374,11 @@ export default function Home() {
       </section>
 
       {/* ───────── CUSTOM PROJECTS CTA ───────── */}
-      <section className="py-28 md:py-40 bg-background relative grain">
+      <section className="py-20 md:py-28 bg-background relative grain">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
-            <div className="reveal-image">
-              <div className="img-hover aspect-[4/5] relative">
+            <div className="reveal-scale delay-200">
+              <div className="img-hover aspect-[4/5] relative overflow-hidden">
                 <Image
                   src="/images/tikal-e4e7cdf1.jpg"
                   alt="Espacio funcional y acogedor por TIKAL"
@@ -455,7 +455,7 @@ export default function Home() {
       </section>
 
       {/* ───────── CONTACT / LOCATION ───────── */}
-      <section id="contacto" className="py-28 md:py-40 bg-foreground text-white relative">
+      <section id="contacto" className="py-20 md:py-28 bg-foreground text-white relative">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid md:grid-cols-2 gap-16 md:gap-24">
             <div>
